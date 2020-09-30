@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/container"
+    android:padding="10dp">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp">
+        <ImageView
+            android:id="@+id/iv_product"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:elevation="10dp"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_listed_price"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12000"
+        android:layout_below="@id/card"
+        android:textColor="@color/black"
+        android:textSize="16sp"/>
+    <TextView
+
+        android:textSize="12sp"
+        android:id="@+id/tv_label_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(24000)"
+        android:layout_toEndOf="@id/tv_listed_price"
+        android:layout_below="@id/card"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="5dp"/>
+    <TextView
+        android:id="@+id/tv_discount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50% OFF"
+        android:layout_toEndOf="@id/tv_label_price"
+        android:layout_below="@id/card"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/green"
+        android:layout_marginStart="5dp"/>
+    <TextView
+        android:id="@+id/tv_product_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mapel Fashion"
+        android:maxLines="1"
+        android:layout_below="@id/tv_listed_price"
+        android:textColor="@color/black"
+        />
+    <uz.jamshid.library.ExactRatingBar
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/tv_product_name"
+        android:id="@+id/rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:starCount="5"
+        app:isIndicator="false"
+        app:starFillColor="@color/golden"
+        app:starSize="35"
+        app:starValue="5"
+        />
+
+
+</RelativeLayout>
